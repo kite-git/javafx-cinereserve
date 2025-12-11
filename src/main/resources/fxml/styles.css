@@ -1,0 +1,234 @@
+/* ====== LEFT SIDE (VBox) ====== */
+.left-pane {
+    -fx-background-color: linear-gradient(to bottom, #000000, #333333);
+}
+
+/* Any label inside the left-pane should be white */
+.left-pane .label {
+    -fx-text-fill: #ffffff;
+}
+
+/* ListView inside left pane */
+.left-pane .list-view {
+    -fx-background-color: rgba(255,255,255,0.1); /* slight transparency */
+    -fx-control-inner-background: rgba(255,255,255,0.1);
+    -fx-text-fill: #ffffff;
+    -fx-border-color: #666666;
+}
+
+.left-pane .list-view .list-cell {
+    -fx-text-fill: white;            /* makes the item text white */
+    -fx-font-size: 14px;             /* optional: tweak size */
+    -fx-font-family: "Segoe UI", sans-serif;
+}
+
+/* Optional: change selected/focused cell color for contrast */
+.left-pane .list-view .list-cell:filled:selected,
+.left-pane .list-view .list-cell:filled:selected:hover {
+    -fx-background-color: #555555;  /* darker background on selection */
+    -fx-text-fill: white;            /* keep text white on selection */
+}
+
+/* ComboBox inside left pane */
+.left-pane .combo-box {
+    -fx-background-color: #555555;
+    -fx-border-color: #777777;
+    -fx-text-fill: #ffffff;
+}
+.left-pane .combo-box .list-cell {
+    -fx-text-fill: #ffffff;
+}
+
+/* ====== CENTER AREA (Seat Selection Section) ====== */
+.center-pane {
+    -fx-background-color: #ffffff;
+}
+
+/* ====== LABEL STYLING ====== */
+.label {
+    -fx-font-family: "Segoe UI", "Arial", sans-serif;
+    -fx-text-fill: #222222;
+}
+
+/* Headings like "Available Movies", "Movie Details", etc. */
+.label.heading {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+
+/* Main title like "Seat Selection" */
+.label.main-title {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+}
+
+/* Screen label style */
+.screen-label {
+    -fx-background-color: #333;
+    -fx-text-fill: white;
+    -fx-padding: 10;
+    -fx-font-size: 14px;
+}
+
+/* ====== BUTTONS ====== */
+.button {
+    -fx-font-family: "Segoe UI", "Arial", sans-serif;
+    -fx-font-size: 14px;
+    -fx-background-radius: 6px;
+    -fx-border-radius: 6px;
+}
+
+/* Book button (green) */
+#bookButton {
+    -fx-background-color: #4CAF50;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+/* Logout button (red) */
+#logoutButton {
+    -fx-background-color: #f44336;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+/* Generic login button (if reused elsewhere) */
+.login-button {
+    -fx-background-color: #000000;
+    -fx-text-fill: #ffffff;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-background-radius: 6px;
+    -fx-border-radius: 6px;
+}
+
+/* ====== TEXTFIELDS AND PASSWORDFIELDS ====== */
+.text-field, .password-field {
+    -fx-background-color: #e0e0e0;   /* light gray */
+    -fx-text-fill: #000000;
+    -fx-font-size: 14px;
+    -fx-background-radius: 6px;
+    -fx-border-radius: 6px;
+    -fx-padding: 4 8 4 8;
+    -fx-border-color: #bdbdbd;
+}
+
+/* ====== SIGN IN TITLE ====== */
+.signin-label {
+    -fx-font-family: "Segoe UI Semibold", "Arial Black", sans-serif;
+    -fx-font-size: 28px;
+    -fx-text-fill: #222222;
+}
+
+/* ====== SCROLLPANE ====== */
+.scroll-pane {
+    -fx-background: #ffffff;
+    -fx-border-color: #cccccc;
+    -fx-background-radius: 6px;
+    -fx-border-radius: 6px;
+    -fx-padding: 4;
+}
+
+/* ====== STATUS LABEL ====== */
+#statusLabel {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #444444;
+}
+
+/* ===== TOP PANEL (Welcome + Logout) ===== */
+.top-panel {
+    -fx-background-color: #222222;
+    -fx-padding: 10;
+    -fx-spacing: 10;
+    -fx-border-color: #444444;
+    -fx-border-width: 0 0 1 0; /* bottom border only */
+}
+
+.top-panel .label {
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+}
+
+/* ===== BOTTOM PANEL (Book Button + Status) ===== */
+.bottom-panel {
+    -fx-background-color: #222222;
+    -fx-padding: 10;
+    -fx-spacing: 10;
+    -fx-border-color: #444444;
+    -fx-border-width: 1 0 0 0; /* top border only */
+}
+
+.bottom-panel .label {
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+
+/* ===== Buttons in panels ===== */
+.top-panel #logoutButton {
+    -fx-background-color: #f44336;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 6px;
+}
+
+.bottom-panel #bookButton {
+    -fx-background-color: #4CAF50;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 6px;
+}
+
+.left-pane .text-area {
+    -fx-background-color: transparent;         /* outer background */
+    -fx-control-inner-background: #333333;     /* inner background */
+    -fx-text-fill: white;                       /* text color */
+    -fx-prompt-text-fill: #aaaaaa;              /* prompt text */
+    -fx-highlight-fill: #666666;                /* selection background */
+    -fx-highlight-text-fill: white;             /* selection text color */
+    -fx-border-color: #666666;
+    -fx-background-radius: 6px;
+    -fx-border-radius: 6px;
+}
+
+.left-pane .text-area .content {
+    -fx-background-color: #333333;         /* outer background */
+    -fx-text-fill: white;                       /* text color */
+    -fx-prompt-text-fill: #aaaaaa;              /* prompt text */
+    -fx-highlight-fill: #666666;                /* selection background */
+    -fx-highlight-text-fill: white;             /* selection text color */
+    -fx-border-color: #666666;
+    -fx-background-radius: 6px;
+    -fx-border-radius: 6px;
+}
+
+#statusLabel {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #ffffff;          /* white text for dark panels */
+    -fx-padding: 4 8 4 8;
+}
+
+.back-button {
+    -fx-background-color: #333;
+    -fx-text-fill: white;
+    -fx-padding: 6 12;
+    -fx-font-size: 14px;
+    -fx-background-radius: 5;
+}
+.back-button:hover {
+    -fx-background-color: #555;
+}
+.payment-back-pane {
+    -fx-background-color: linear-gradient(to bottom, #000000, #333333);
+}
+
+.payment-back-pane-label {
+    -fx-text-fill: #ffffff;
+}
+
+.payment-center-pane {
+    -fx-background-color: #ffffff;
+}

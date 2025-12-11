@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane prefWidth="632.0" xmlns="http://javafx.com/javafx/21.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cinema.controller.AboutController">
+
+    <!-- LEFT PANE -->
+    <left>
+        <VBox alignment="CENTER" prefWidth="250.0" spacing="20.0" styleClass="left-pane">
+            <children>
+                <ImageView fitHeight="84.0" fitWidth="209.0" preserveRatio="true">
+                    <image>
+                        <Image url="@../com/cinema/logo-cinereserve-white.png" />
+                    </image>
+                </ImageView>
+                <Label styleClass="main-title" text="ABOUT US" />
+            </children>
+            <padding>
+                <Insets bottom="20" left="20" right="20" top="20" />
+            </padding>
+        </VBox>
+    </left>
+
+    <!-- CENTER PANE -->
+    <center>
+        <VBox alignment="TOP_LEFT" spacing="20.0" styleClass="center-pane">
+            <children>
+                <!-- Back Button -->
+                <Button fx:id="backButton" onAction="#handleBack" styleClass="back-button" text="← Back" />
+
+                <!-- App Description -->
+                <Label styleClass="heading" text="CineReserve" />
+                <Text styleClass="about-text" text="CineReserve is a collaborative movie reservation platform developed by our team. It allows viewers to browse available movies, view details and showtimes, and seamlessly book their preferred seats in real time. Our goal is to make movie reservations effortless, efficient, and fun for everyone." wrappingWidth="320.0" />
+
+                <!-- Meet the Team Section -->
+                <Label styleClass="heading" text="Meet the Team" />
+                <HBox alignment="CENTER_LEFT" spacing="30.0">
+                    <children>
+                        <VBox alignment="CENTER">
+                            <ImageView fitHeight="120.0" fitWidth="120.0" preserveRatio="true">
+                                <image>
+                                    <Image url="@../com/cinema/profileImage.jpg" />
+                                </image>
+                                <clip>
+                                    <Circle centerX="60" centerY="60" radius="60" />
+                                </clip>
+                            </ImageView>
+                            <Label styleClass="team-name" text="Kite Buerano" />
+                        </VBox>
+                        <VBox alignment="CENTER">
+                            <ImageView fitHeight="120.0" fitWidth="120.0" preserveRatio="true">
+                                <image>
+                                    <Image url="@../com/cinema/profileImage2.jpg" />
+                                </image>
+                                <clip>
+                                    <Circle centerX="60" centerY="60" radius="60" />
+                                </clip>
+                            </ImageView>
+                            <Label styleClass="team-name" text="Christian Orias" />
+                        </VBox>
+                    </children>
+                </HBox>
+            </children>
+            <padding>
+                <Insets bottom="20" left="20" right="20" top="20" />
+            </padding>
+        </VBox>
+    </center>
+
+</BorderPane>
